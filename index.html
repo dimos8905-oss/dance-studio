@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наталья Коробко — Хореограф. Обучение танцам</title>
+    <link rel="stylesheet" href="site.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__logo">
+                <div class="logo-circle">
+                    <span class="logo-initials">НК</span>
+                </div>
+            </div>
+            <div class="nav__links">
+                <a href="#about">Обо мне</a>
+                <a href="#classes">Занятия</a>
+                <a href="#gallery">Галерея</a>
+                <a href="#contact">Контакты</a>
+            </div>
+            <button class="btn btn--primary" onclick="openModal()">Записаться</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero__content">
+                <p class="hero__greeting">Хореограф • Педагог</p>
+                <h1 class="hero__title">Наталья <span class="gradient-text">Коробко</span></h1>
+                <p class="hero__subtitle">Влюбила в танец более 650 детей и взрослых. Дважды дипломированный специалист в области хореографического искусства</p>
+                <div class="hero__buttons">
+                    <button class="btn btn--large btn--primary" onclick="openModal()">Записаться на занятие</button>
+                    <a href="#about" class="btn btn--large btn--outline">Узнать больше</a>
+                </div>
+            </div>
+            <div class="hero__scroll-hint">
+                <span>Листай вниз</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <section class="section-3d" id="about">
+            <div class="container">
+                <div class="section-3d__wrapper">
+                    <div class="section-3d__text">
+                        <p class="section-label">Обо мне</p>
+                        <h2 class="section-title">Танцы — это не просто движение, это язык души</h2>
+                        <p class="section-3d__desc">Меня зовут Коробко Наталия Станиславовна. Я дважды дипломированный педагог-специалист в области хореографического искусства. Это значит, что я универсальный преподаватель, владеющий большим количеством профессиональных дисциплин.</p>
+                        <p class="section-3d__desc">Влюбила в танец более 650 детей и взрослых. На моих занятиях каждый находит своё направление — от современной хореографии до постановки свадебных танцев. Работаю с учениками любого возраста и уровня подготовки.</p>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-item__icon">💃🏻</span>
+                                <span>Универсальный педагог</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-item__icon">🎓</span>
+                                <span>2 диплома</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-item__icon">🏆</span>
+                                <span>70+ побед на конкурсах</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-item__icon">💫</span>
+                                <span>Любой возраст</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="canvas-3d" class="section-3d__canvas"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats" id="stats">
+            <div class="container">
+                <div class="stats__grid">
+                    <div class="stat-card">
+                        <div class="stat-card__number">8+</div>
+                        <div class="stat-card__label">лет опыта</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__number">650+</div>
+                        <div class="stat-card__label">учеников</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__number">70+</div>
+                        <div class="stat-card__label">побед на конкурсах</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__number">Любой</div>
+                        <div class="stat-card__label">возраст</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills" id="classes">
+            <div class="container">
+                <h2 class="section-title">Направления занятий</h2>
+                <p class="section-subtitle">Подберём танцы под характер и настроение вашего ребёнка</p>
+                <div class="skills__grid">
+                    <div class="skill-card">
+                        <div class="skill-card__icon">💃</div>
+                        <h3 class="skill-card__title">Современная хореография</h3>
+                        <div class="skill-card__bar"><div class="skill-card__fill" style="width: 95%"></div></div>
+                        <p class="skill-card__level">Любой возраст</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">🎵</div>
+                        <h3 class="skill-card__title">Jazz Funk</h3>
+                        <div class="skill-card__bar"><div class="skill-card__fill" style="width: 90%"></div></div>
+                        <p class="skill-card__level">Любой возраст</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">👑</div>
+                        <h3 class="skill-card__title">Lady Dance</h3>
+                        <div class="skill-card__bar"><div class="skill-card__fill" style="width: 85%"></div></div>
+                        <p class="skill-card__level">Любой возраст</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">🧘</div>
+                        <h3 class="skill-card__title">Растяжка</h3>
+                        <div class="skill-card__bar"><div class="skill-card__fill" style="width: 80%"></div></div>
+                        <p class="skill-card__level">Любой возраст</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">🎭</div>
+                        <h3 class="skill-card__title">Развитие пластики</h3>
+                        <div class="skill-card__bar"><div class="skill-card__fill" style="width: 88%"></div></div>
+                        <p class="skill-card__level">Любой возраст</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">✨</div>
+                        <h3 class="skill-card__title">Постановка номеров</h3>
+                        <div class="skill-card__bar"><div class="skill-card__fill" style="width: 70%"></div></div>
+                        <p class="skill-card__level">Индивидуально</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="gallery">
+            <div class="container">
+                <h2 class="section-title">Моменты с занятий</h2>
+                <p class="section-subtitle">Эмоции, движение и вдохновение</p>
+                <div class="projects__grid">
+                    <div class="project-card">
+                        <div class="project-card__visual" style="background: linear-gradient(135deg, #667eea, #764ba2);"></div>
+                        <div class="project-card__info">
+                            <h3 class="project-card__title">Свадебный танец</h3>
+                            <p class="project-card__desc">Постановка трогательного номера для самого важного дня</p>
+                            <div class="project-card__tags">
+                                <span>Свадьба</span><span>Индивидуально</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-card__visual" style="background: linear-gradient(135deg, #f093fb, #f5576c);"></div>
+                        <div class="project-card__info">
+                            <h3 class="project-card__title">Корпоративный номер</h3>
+                            <p class="project-card__desc">Яркое выступление для корпоративного мероприятия</p>
+                            <div class="project-card__tags">
+                                <span>Корпоратив</span><span>Группа</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-card__visual" style="background: linear-gradient(135deg, #4facfe, #00f2fe);"></div>
+                        <div class="project-card__info">
+                            <h3 class="project-card__title">Вальс на последний звонок</h3>
+                            <p class="project-card__desc">Незабываемое выступление на школьном празднике</p>
+                            <div class="project-card__tags">
+                                <span>Школа</span><span>Вальс</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" id="contact">
+            <div class="container">
+                <h2 class="cta__title">Постановка свадебного танца, номера на корпоратив, вальсы на последний звонок</h2>
+                <p class="cta__text">Индивидуальные занятия под ваш запрос. Запись на пробный урок не нужна — просто свяжитесь со мной!</p>
+                <div class="cta__contacts">
+                    <a href="tel:+70000000000" class="cta__phone">+7 (000) 000-00-00</a>
+                    <div class="cta__socials">
+                        <a href="#" class="social-link">VK</a>
+                        <a href="#" class="social-link">TG</a>
+                        <a href="#" class="social-link">IG</a>
+                    </div>
+                </div>
+                <button class="btn btn--large btn--primary" onclick="openModal()">Записаться</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3>Наталья Коробко</h3>
+                    <p>Хореограф • Педагог</p>
+                </div>
+                <div class="footer__links">
+                    <a href="#about">Обо мне</a>
+                    <a href="#classes">Занятия</a>
+                    <a href="#gallery">Галерея</a>
+                    <a href="#contact">Контакты</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2026 Наталья Коробко</p>
+                <p style="margin-top: 8px;"><a href="#" onclick="openPolicy(); return false;" style="color: var(--accent); text-decoration: none;">Политика конфиденциальности</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Политика конфиденциальности -->
+    <div class="modal" id="policy-modal">
+        <div class="modal__content" style="max-width: 700px; max-height: 80vh; overflow-y: auto;">
+            <button class="modal__close" onclick="closePolicy()">×</button>
+            <h2 class="modal__title">Политика конфиденциальности</h2>
+            <div class="policy-content">
+                <p><strong>1. Общие положения</strong></p>
+                <p>Настоящая Политика обработки персональных данных (далее — Политика) разработана в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных» и определяет порядок обработки и защиты персональных данных пользователей сайта.</p>
+                
+                <p><strong>2. Какие данные мы собираем</strong></p>
+                <p>При отправке формы на сайте мы собираем следующие персональные данные:</p>
+                <ul>
+                    <li>Имя</li>
+                    <li>Номер телефона</li>
+                    <li>Возраст ребёнка (необязательно)</li>
+                </ul>
+                
+                <p><strong>3. Цели обработки данных</strong></p>
+                <p>Мы обрабатываем ваши персональные данные исключительно для следующих целей:</p>
+                <ul>
+                    <li>Обратная связь с пользователем</li>
+                    <li>Запись на занятия</li>
+                    <li>Информирование о расписании и мероприятиях</li>
+                </ul>
+                
+                <p><strong>4. Защита данных</strong></p>
+                <p>Мы принимаем необходимые организационные и технические меры для защиты ваших персональных данных от несанкционированного доступа, утери или изменения.</p>
+                
+                <p><strong>5. Передача данных третьим лицам</strong></p>
+                <p>Мы не передаём, не продаём и не раскрываем ваши персональные данные третьим лицам, за исключением случаев, предусмотренных законодательством РФ.</p>
+                
+                <p><strong>6. Хранение данных</strong></p>
+                <p>Ваши персональные данные хранятся не дольше, чем этого требуют цели обработки, после чего подлежат уничтожению.</p>
+                
+                <p><strong>7. Ваши права</strong></p>
+                <p>Вы имеете право требовать уточнения, блокирования или удаления ваших персональных данных, обратившись к нам по контактам, указанным на сайте.</p>
+                
+                <p><strong>8. Контактная информация</strong></p>
+                <p>По вопросам, связанным с обработкой персональных данных, вы можете обратиться к владельцу сайта по контактам, указанным в разделе «Контакты».</p>
+            </div>
+            <button class="btn btn--primary btn--full" style="margin-top: 20px;" onclick="closePolicy()">Закрыть</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeModal()">×</button>
+            <h2 class="modal__title">Записаться на занятие</h2>
+            <form class="modal__form" onsubmit="submitForm(event)">
+                <label style="display: flex; flex-direction: column; gap: 5px; font-size: 0.9rem;">
+                    <span>Ваше имя <span style="color: #f5576c;">*</span></span>
+                    <input type="text" placeholder="Ваше имя" required>
+                </label>
+                <label style="display: flex; flex-direction: column; gap: 5px; font-size: 0.9rem;">
+                    <span>Телефон <span style="color: #f5576c;">*</span></span>
+                    <input type="tel" id="phone-input" placeholder="+7 (___) ___-__-__" required oninput="formatPhone(this)">
+                </label>
+                <label style="display: flex; flex-direction: column; gap: 5px; font-size: 0.9rem;">
+                    <span>Что вас интересует</span>
+                    <textarea placeholder="Свадебный танец, корпоратив, индивидуальные занятия..." rows="3"></textarea>
+                </label>
+                <label class="modal__checkbox">
+                    <input type="checkbox" required>
+                    <span>Я согласен(на) на обработку персональных данных в соответствии с <a href="#" onclick="openPolicy(); return false;">политикой конфиденциальности</a></span>
+                </label>
+                <button type="submit" class="btn btn--primary btn--full">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openModal() { document.getElementById('modal').classList.add('active'); }
+        function closeModal() { document.getElementById('modal').classList.remove('active'); }
+        document.getElementById('modal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+        function submitForm(e) { e.preventDefault(); alert('Заявка отправлена! Я свяжусь с вами.'); closeModal(); }
+        function openPolicy() { document.getElementById('policy-modal').classList.add('active'); }
+        function closePolicy() { document.getElementById('policy-modal').classList.remove('active'); }
+        document.getElementById('policy-modal').addEventListener('click', function(e) { if (e.target === this) closePolicy(); });
+
+        // Валидация телефона — только цифры, плюс и дефис
+        function formatPhone(input) {
+            let value = input.value.replace(/[^0-9+\-]/g, '');
+            input.value = value;
+        }
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', function(e) { e.preventDefault(); const t = document.querySelector(this.getAttribute('href')); if (t) t.scrollIntoView({ behavior: 'smooth' }); }));
+
+        window.addEventListener('load', init3D);
+    </script>
+    <script src="3d.js"></script>
+</body>
+</html>
